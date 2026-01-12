@@ -1,0 +1,15 @@
+<html>
+<body>
+<input type="file" id="fileInput">
+<script>
+	let fileInput = document.getElementById('fileInput')
+fileInput.onChange = e =>{
+	let r =new fileReader();
+	r.addEventListener("load",()=>{
+		console.log(JSON.parse(r.result));
+	})
+	r.readAsText(e.target.files[0]);
+}
+</script>
+</body>
+</html>
