@@ -1,20 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P2</title>
 </head>
 <body>
-	<button id="btn">load User</button>
-	<div id="output"></div>
-	<script>
-		document.getElementById("btn").onclick = async() => {
-			let res = await fetch("https://69647f7ae8ce952ce1f1dcb9.mockapi.io/abcd/demo");
-			let data = await res.json();
-			document.getElementById("output").innerHTML = JSON.stringify(data, null, 2);
-		};
-	</script>
-
+    <script>
+        let nums = [10, 20, 30];
+        let [a, b, c] = nums;
+        let newNums = [...nums, 40, 50];
+        document.write("a = ", a, " || b = ", b, " || c = ", c + "<br/>");
+        documnet.write("New Array : ", newNums + "<br/><br/>");
+    </script>
 </body>
 </html>

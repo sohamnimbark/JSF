@@ -1,15 +1,16 @@
+<!DOCTYPE html>
 <html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Personalised Greeting</title>
+</head>
 <body>
-<input type="file" id="fileInput">
-<script>
-	let fileInput = document.getElementById('fileInput')
-fileInput.onChange = e =>{
-	let r =new fileReader();
-	r.addEventListener("load",()=>{
-		console.log(JSON.parse(r.result));
-	})
-	r.readAsText(e.target.files[0]);
-}
-</script>
+	<h3>Personalised Greeting</h3>
+	<script>
+		const greet =(name, age) => `hello ${name}! You are ${age} years old.`
+		console.log(greet("Soham", 19));
+	</script>
+
 </body>
 </html>
