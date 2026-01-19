@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Student Detail
+	</title>
+</head>
+<body>
+	<h3>Student Detail</h3>
+	<button onclick="show()">show info</button>
+	<div id="box"></div>
+	<script>
+		class student {
+			constructor(n,r,c){
+				this.name=n;
+				this.roll=r;
+				this.course=c;
+			}
+			display(){
+				return `name: ${this.name}<br> Roll no: ${this.roll}<br> Course: ${this.course}`;
+			}
+		}
+		function show() {
+			const s = new student("Soham Nimbark",246,"DCE");
+			document.getElementById("box").innerHTML = s.display();
+		}
+		
+	</script>
+</body>
+</html>
